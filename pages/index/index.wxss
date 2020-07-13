@@ -1,0 +1,184 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container{
+  background:rgba(245, 245, 245, 1);
+  width:100%;
+  height:100%;
+  padding-bottom:20px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.porNav{
+  width:100%;
+  height:450rpx;
+}
+.header{
+  height:120rpx;
+}
+.navHead {
+    width: 80%;
+    height: 4.9rem;
+    top: 5.3rem;
+    background: rgba(0, 0, 0, 0.5);
+    left: 50%;
+    margin-left: -40%;
+    color: #fff;
+    text-align: center;
+    font-size: .6rem;
+    border-radius: 4px;
+    z-index: 111;
+}
+.navHead .h3 {
+  display: block;
+  width: 100%;
+    font-size: 1.4rem;
+    letter-spacing: 20px;
+    margin-top:0.6rem;
+}
+.navHead .p1 {
+  display: block;
+  width: 100%;
+    font-size: .6rem;
+    letter-spacing: 8px;
+    text-indent: 8px;
+    
+}
+.navHead .p2 {
+  display: block;
+  width: 100%;
+    font-size: .6rem;
+    letter-spacing: 1.6px;
+    text-indent: 1.6px;
+}
+.weui-grid {
+position:relative;
+float:left;
+padding:30rpx 20rpx;
+width:33.33333333%;
+box-sizing:border-box;
+
+}
+.weui-grid__icon {
+display:block;
+width:28px;
+height:28px;
+margin:0 auto;
+
+}
+.porbg{
+  background:rgba(245, 245, 245, 1);
+}
+.menuBox {
+    width: 94%;
+    top: 11rem;
+    background: #fff;
+    left: 50%;
+    margin-left: -47%;
+    color: #000;
+    text-align: center;
+    font-size: .6rem;
+    border-radius: 8px;
+    z-index: 11;
+    box-shadow: 0 6px 8px rgba(0, 153, 255, 0.05);
+}
+.weui-grid__label{
+  margin-top:10rpx;
+}
+swiper{
+  height:40px;
+  line-height: 40px;
+  font-size: 14px;
+  background:#fff;
+  margin-bottom:30rpx;
+}
+.noticeImg{
+  width:16px;
+  height:16px;
+  margin-left:14px;
+  margin-right:10px;
+  vertical-align: middle;
+}
+.pns{
+  background:#fff;
+  padding:10px 0;
+}
+.pns .h2,.finance .h2{
+  display: block;
+  width:100%;
+  font-weight: bold;
+  font-size: 18px;
+  height:44px;
+  line-height: 44px;
+  text-indent: 10px;
+  border-bottom:1px solid #ccc;
+}
+.finance .h2{
+  border:none;
+}
+.pns .listTop .weui-grid {
+    position: relative;
+    float: left;
+    padding: 15px 10px 0px;
+    width: 20%;
+    height: 3rem;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: center;
+}
+.weui-grid__icon image{
+  width:28px;
+  height:28px;
+  margin:0 auto;
+}
+.imgList{
+  width:94%;
+  margin:16px auto 10px;
+}
+.imgList navigator{
+  display: block;
+  width:48%;
+  font-size: 14px;
+  margin-top:16px;
+}
+.imgList image{
+  width:100%;
+  height:240rpx;
+}
+.w94 {
+    display: block;
+    width: 94%;
+    height: 450rpx;
+    margin: 0px auto;
+}
+.oaImg {
+    left: 50%;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -18px;
+    width: 80rpx;
+    height: 80rpx;
+}
+.finance {
+    background: #fff;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+

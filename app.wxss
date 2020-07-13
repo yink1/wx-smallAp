@@ -1,0 +1,55 @@
+/**app.wxss**/
+.container {
+  
+}
+.dn{
+  display: none;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    z-index: 1111;
+    background: #fff;
+}
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.imagesPo{
+  width:280rpx;
+  height:80rpx;
+  margin: 20rpx 0 16rpx 40rpx; 
+}
+.fl{
+  float:left;
+}
+.fr{
+  float: right;
+}
+.header .menu navigator.more image{
+   width:40rpx;
+   height:40rpx;
+   margin-left:8rpx;
+   padding-top:6rpx;
+   
+}
+.header .menu navigator.more{
+border-left:4rpx solid #000;
+padding-left:24rpx;
+vertical-align: middle;
+margin-left:28rpx;
+}
+.header .menu {
+    width: 30%;
+    padding-top: 40rpx;
+}
+.por{
+  position: relative;
+}
+.poa{
+  position: absolute;
+}

@@ -1,0 +1,13 @@
+/* components/tipError/tipError.wxss */
+.tipShow{
+  width:100%;
+  height:40px;
+  background:red;
+  text-align: center;
+  line-height: 40px;
+  position: fixed;
+  z-index: 112222;
+  top:0;
+  left: 0;
+  color:#fff;
+}

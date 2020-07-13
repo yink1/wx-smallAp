@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "searchbar": "../../components/searchbar/searchbar",
+    "timePicker": "../../components/timePicker/timePicker",
+    "tipError":"../../components/tipError/tipError"
+  }
+}

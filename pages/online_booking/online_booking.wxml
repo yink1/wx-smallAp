@@ -1,0 +1,42 @@
+<!--pages/online_booking/online_booking.wxml-->
+<text>pages/online_booking/online_booking.wxml</text>
+<view>
+ <view class="header">
+ <image class="poa goBack" src='../../images/goback.png' bindtap='goback'></image>
+    <view class='h2'>MAERSK</view>
+    <image class="poa more" src='../../images/music.png'></image>
+        <view class="serchNav serchNavOl clearfix">
+            <view class="ontop">
+                <view class="fl qsBox">
+                    <view class="qsZname">
+                        宁波
+                    </view>
+                    <view class="qsEname">
+                        NINGBO
+                    </view>
+                </view>
+                <view class="fl arrowImg">
+                  <image class='imgarow' src='../../images/arrow.png'></image>
+                    <view class="tgp">TGP</view>
+                </view>
+                <view class="fl mdBox">
+                    <view class="mdZname">布宜诺斯艾利斯</view>
+                    <view class="mdEname">BUENOS AIRES</view>
+
+                </view>
+            </view>
+            <view class="clearfix shipDetail">
+                <view class="fl">
+                    <view>船期 6/7 5/6 5/7</view>
+                    <view>北三集</view>
+                </view>
+                <view class="fr">
+                    船程 5天/4天/3天
+                </view>
+            </view>
+        </view>
+        <view class="navtitle navtitled">
+            <view>03-15 至 03-31 有效</view>
+        </view>
+    </view>
+</view>

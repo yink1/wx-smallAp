@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/online_booking/online_booking",
+    "pages/fare_search/fare_search",
+    "pages/search_end/search_end",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "运化工",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#09f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/bar1.png",
+        "selectedIconPath": "images/bar1_on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/fare_search/fare_search",
+        "iconPath": "images/bar2.png",
+        "selectedIconPath": "images/bar2_on.png",
+        "text": "运价"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/bar3.png",
+        "selectedIconPath": "images/bar3_on.png",
+        "text": "服务"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/bar4.png",
+        "selectedIconPath": "images/bar4_on.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/bar5.png",
+        "selectedIconPath": "images/bar5_on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

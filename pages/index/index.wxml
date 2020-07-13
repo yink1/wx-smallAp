@@ -1,0 +1,140 @@
+<!--index.wxml-->
+<set-tab-bar wx:if="{{isSetTabBarPage}}" bindunmount="leaveSetTabBarPage"></set-tab-bar>
+<view class="container">
+  <view class="header">
+   <view class="clearfix">
+      <image  class="fl imagesPo" src="../../images/logo.png" alt=""></image>
+      <view class="fr menu clearfix">
+          <navigator style='display:inline-block' url='' class="en fl" href="/en">
+              EN
+          </navigator>
+          <navigator url='' class="more fl">
+          <image src='../../images/music.png'></image>
+          </navigator>
+      </view>
+    </view>
+  </view>
+  <view class='por porbg'>
+    <image class='porNav' src='../../images/nav.png'></image>
+    <view class="poa navHead">
+        <view class='h3'>
+            运化工
+        </view>
+        <view class="p1">
+            一站式危险品物流服务平台
+        </view>
+        <view class="p2">
+            SAFE ENVIRONMENT EFFICIENCY
+        </view>
+    </view>
+    <view class="page__bd poa menuBox">
+        <view class="weui-grids">
+            <block wx:for="{{grids}}" wx:key="*this">
+                <navigator url="{{item.url}}" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="{{item.imgUrl}}" />
+                    <view class="weui-grid__label">{{item.title}}</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+  </view>
+  <view style='width:100%;height:300rpx;background: rgba(245, 245, 245, 1);'></view>
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical height='20'>
+  <block wx:for="{{imgTitle}}" wx:key="*this">
+    <swiper-item>
+     <navigator url='{{item.url}}'>
+      <view height="20">
+      <image class='noticeImg' src='../../images/notice.png'></image>
+      
+      {{item.title}}</view>
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+ <view class="pns">
+                    <view class="h2">产品和服务</view>
+                    <view class="weui-grids listTop">
+                        <navigator url="" class="weui-grid js_grid">
+                            <view class="weui-grid__icon">
+                                <image src="../../images/pns1.png" alt=""></image>
+                            </view>
+                            <view class="p weui-grid__label">
+                                海运整箱
+                            </view>
+                        </navigator>
+                       
+                        <navigator url="" class="weui-grid js_grid hi36">
+                            <view class="weui-grid__icon">
+                                <image src="../../images/pns1.png" alt=""></image>
+                            </view>
+                            <view class="p weui-grid__label">
+                                陆运
+                            </view>
+                        </navigator>
+                        
+                        <navigator url="" class="weui-grid js_grid">
+                            <view class="weui-grid__icon">
+                                <image src="../../images/pns6.png" alt=""></image>
+                            </view>
+                            <view class="p weui-grid__label">
+                                仓储配送
+                            </view>
+                        </navigator>
+                        
+                        <navigator url="" class="weui-grid js_grid">
+                            <view class="weui-grid__icon">
+                                <image src="../../images/pns8.png" alt=""></image>
+                            </view>
+                            <view class="p weui-grid__label">
+                                码头物流
+                            </view>
+                        </navigator>
+                        <navigator url="" class="weui-grid js_grid">
+                            <view class="weui-grid__icon">
+                                <image src="../../images/pns9.png" alt=""></image>
+                            </view>
+                            <view class="p weui-grid__label">
+                                罐箱服务
+                            </view>
+                        </navigator>
+                        
+                    </view>
+                    <view class="imgList clearfix">
+                        <navigator url="" class="fl">
+                            <view class="clearfix">
+                            <image class="fl" src="../../images/yongang.png" alt=""></image>
+                               
+                            </view>
+                            <view class=" p weui-grid__label">
+                                宁波永港海安
+                            </view>
+                        </navigator>
+                        <navigator url="" class="fr">
+                            <view class="clearfix">
+                            <image class="fr" src="../../images/jiaxin.png" alt=""></image>
+                            </view>
+                            <view class="p weui-grid__label">
+                                嘉兴海泰
+                            </view>
+                        </navigator>
+
+                    </view>
+                </view>
+                <view class="finance">
+                    <view class='h2'>永泰物流</view>
+                    <view class="por">
+                        <navigator url="javascript:;">
+                            <image class="w94" src="../../images/video.png" alt=""></image>
+                            <image class="poa oaImg" src="../../images/bofang.png" alt=""></image>
+                        </navigator>
+                    </view>
+                    <view style="font-size: 12px;color:#666;margin:5px auto;width: 94%;">(建议WIFI情况下浏览)</view>
+
+                </view>
+  <view>
+  <button bindtap="pickerShow" style="width:80vw;margin-top:20rpx;display:none">起始时间：{{startTime}}~{{endTime}}</button>
+</view>
+</view>
+<timePicker pickerShow="{{isPickerShow}}" id="picker" wx:if="{{isPickerRender}}" bind:hidePicker="pickerHide" bind:setPickerTime="setPickerTime"
+  config="{{pickerConfig}}"></timePicker>

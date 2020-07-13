@@ -1,0 +1,72 @@
+<!--pages/search_end/search_end.wxml-->
+<view class='page'>
+  <view class="header">
+    <image class="poa goBack" src='../../images/goback.png' bindtap='goback'></image>
+    <view class='h2'>查询结果</view>
+    <image class="poa more" src='../../images/music.png'></image>
+    <view class="serchNav clearfix">
+      <view class="fl qsBox">
+        <view class="qsZname">
+          宁波
+        </view>
+        <view class="qsEname">
+          NINGBO
+        </view>
+      </view>
+      <view class="fl arrowImg">
+        <image src='../../images/arrow.png'></image>
+      </view>
+      <view class="fl mdBox">
+        <view class="mdZname">布宜诺斯艾利斯</view>
+        <view class="mdEname">BUENOS AIRES</view>
+      </view>
+    </view>
+    <view class="navtitle clearfix">
+      <view class="fr">40GP</view>
+      <view class="fr">20GP</view>
+      <view class="fr">船期 航程</view>
+    </view>
+    </view>
+    <view style='width:100%;height:180px;'></view>
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style='padding-bottom:40px;'>
+    
+    <view id="my-list" class="listSearch clearfix"  wx:for="{{searchList}}" wx:key="{{index}}">
+      <view class='por'>
+        <view class="xieyi poa">协议</view>
+        <view class="fl w25">
+          <view class="borderImg">
+            <view class="imgBglist2">
+              <image src='{{item.imgLogo}}'></image>
+            </view>
+          </view>
+        </view>
+        <view class="fl w75 box75">
+          <view class="clearfix h75">
+            <view class="fl w33 dateTop">
+              <text class='fr12'>{{item.shipDate}}</text>
+              <text class='fr12'>{{item.voyage}}</text>
+            </view>
+            <view class="fl w33 color20">{{item.price20}}</view>
+            <view class="fl w33 color20">{{item.price40}}</view>
+          </view>
+          <view class="clearfix h35">
+            <view class="fl">{{item.shipPort}}</view>
+            <view class="fr">{{item.date}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+</scroll-view>
+
+    <view class='footer'>
+      <view class="clearfix footerBar">
+        <view class="fl">筛选
+          <text></text>
+        </view>
+        <view class="fl">时间
+          <text></text>
+        </view>
+        <view class="fl">价格</view>
+      </view>
+    </view>
+</view>

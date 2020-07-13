@@ -1,0 +1,151 @@
+<!--pages/fare_search/fare_search.wxml-->
+<view class='farePage por {{ovhiBlo == true?"ovhi":""}}'>
+  <image class='bg2Img' src='../../images/bg2.png'></image>
+  <view class="tab2 weui-tab__bd-item dbg">
+    <view class='h1'>运价查询</view>
+    <view class="menuYj">
+      <view class="qishi selQs1" wx:for='{{qsInputList}}' wx:key='{{index}}' data-key="{{index}}" data-location="{{item.title}}" bindtap="showView">
+        <view class="qsNote">
+          {{item.title}}
+        </view>
+        <input readonly type="text" placeholder="请选择{{item.title}}" value='{{item.val}}' class="selQs" />
+        <view class="lineBot"></view>
+      </view>
+      <view class="qishi selQs1 dn" bindtap="showView">
+        <view class="qsNote">
+          起始港
+        </view>
+        <input readonly type="text" placeholder="请选择起始港" bindtap="showView" value='{{qsVal}}' class="selQs" />
+        <view class="lineBot"></view>
+      </view>
+      <view class="qishi selMd1 dn" bindtap="showView">
+        <view class="qsNote">
+          目的港
+        </view>
+        <input readonly type="text" class="selMd selMd3" placeholder="请选择目的港" />
+        <view class="lineBot"></view>
+      </view>
+      <view class="clearfix qi">
+        <view class="qishi fr" data-location="{{title2}}" data-key="2" bindtap="showView">
+          <view class="qsNote">
+            船公司
+          </view>
+          <input readonly type="text" class="selCg" placeholder="请选择船公司" value="{{shipVal}}"/>
+          <view class="lineBot"></view>
+        </view>
+        <view class="qishi qifr fl" bindtap="pickerShow">
+          <view class="qsNote">
+            出运时间
+          </view>
+          <!-- <input type="text" class="selMd" placeholder="请输入出运时间"> -->
+          <view class="layui-input-inline ui-time" wx:if="{{startTime}}">
+            <input readonly type="text" placeholder="请输入出运时间" class="selTm" value="{{startTime}}~{{endTime}}" />
+          </view>
+          <view class="layui-input-inline ui-time" wx:if="{{!startTime}}">
+            <input readonly type="text" placeholder="请输入出运时间" class="selTm" />
+          </view>
+          <view class="lineBot"></view>
+        </view>
+      </view>
+      <view bindtap="navigatorGo" class="weui-btn weui-btn_primary">查询</view>
+    </view>
+  </view>
+  <view class='bgCol1'></view>
+  <view class='bgCol2'>
+
+    <view class="serHi">
+      搜索历史
+    </view>
+    <view class="serList">
+      <view>NINGBO - AALESUND</view>
+      <view>NINGBO - AALESUND</view>
+      <view>NINGBO - AALESUND</view>
+      <view>NINGBO - AALESUND</view>
+      <view>NINGBO - AALESUND</view>
+      <view>NINGBO - AALESUND</view>
+    </view>
+  </view>
+
+
+  <view class="commodity_screen" bindtap="hideView" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}" bindtap="navigate">
+    <text class="titled">{{title}}</text>
+    <searchbar id='searchbar' input-showed2='false' searchkey="{{searchkey}}"  class="{{ dnshow == 2?'dn':''}}" bindsearchInfo="searchInfo"></searchbar>
+    <view class="tablCon {{ dnshow == 0?'':'dn'}}">
+      <view class="history">
+        <view class='h2'>当前/历史</view>
+        <view class="conZe clearfix">
+          <view class="fl {{current_item1 === index?'actived':' '}}" data-key='{{index}}' bindtap='clicked' wx:for='{{fareQsHisList}}' wx:key="{{index}}">
+            <text class="ename">{{item.ename}}</text>
+            <text class="zname">{{item.zname}}</text>
+          </view>
+
+        </view>
+      </view>
+      <view class="qyg">
+        <view class='h2'>起运港</view>
+        <view class="conZe clearfix">
+          <view class="fl {{current_item2 === index?'current_itemed':' '}}" data-key='{{index}}' bindtap='clicked2' wx:for='{{fareQsList}}' wx:key="{{index}}">
+            <text class="ename">{{item.ename}}</text>
+            <text class="zname">{{item.zname}}</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+    <view class="tabrCon {{ dnshow == 1?'':'dn'}}">
+      <view class="clearfix classhidden">
+        <view class="fl menuList" style="height: 360px;">
+          <view class='lied {{listPort == index?"activedL":""}}' data-key='{{index}}' wx:for='{{hotList}}' wx:key='{{index}}' bindtap='showListPort'>{{item.area}}</view>
+        </view>
+        <view class="fl menuCon" style="margin-left:10px;width:70%; overflow-y: scroll; height: 360px;">
+          <view class='history' wx:if="{{listPortN == 0}}">
+            <view class='h2'>当前/历史</view>
+            <view class='conZed'>
+              <view class="conZe clearfix {{current_hist === index?'actived':' '}}" data-key='{{index}}' bindtap='clicked3' wx:for='{{currHisList}}' wx:key="{{index}}">
+                <view class="flex-view-item">
+                  <text class="ename">{{item.ename}}</text>
+                  <text class="zname">{{item.zname}}</text>
+                </view>
+              </view>
+            </view>
+            <view class="hotport history">
+              <view class='h2'>热门港口</view>
+              <view class='conZed'>
+                <view class="conZe clearfix {{current_hotPort === index?'actived':' '}}" data-key='{{index}}' bindtap='clicked4' wx:for='{{hotPortList}}' wx:key="{{index}}">
+                  <view class="flex-view-item">
+                    <text class="ename">{{item.ename}}</text>
+                    <text class="zname">{{item.zname}}</text>
+                  </view>
+                </view>
+              </view>
+
+
+            </view>
+
+          </view>
+          <view wx:if="{{listPortN != 0}}" class='{{item3 == index?"parActived":""}}' data-idx='{{index}}' data-key='{{index}}' wx:for='{{hotList2}}' wx:key='{{index}}'bindtap='clicked131'>
+          <view class='h2'>{{item.cname}}</view>
+          <view class='conZed conZe'>
+          <view class="flex-view-item {{item2 == index?'actived2':''}}" wx:for='{{item.cityList}}' data-item='{{item}}' data-key='{{index}}' wx:key='{{index}}' bindtap='clicked13'>
+            <text class="ename">{{item.ename}}</text>
+            <text class="zname">{{item.cname}}</text>
+            </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view style='width:100%;height:260px;'></view>
+    </view>
+    <view class="tabrCon tabrCon2 {{ dnshow == 2?'':'dn'}}">
+      <view class='conZed l20'>
+        <view class="w20 {{current_hotPort2 === index?'bactived':' '}}" data-key='{{index}}' wx:key="{{index}}" data-key='{{index}}' bindtap='clicked5' wx:for='{{shipComList}}'>
+          <image src='{{item.imgurl}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<tipError id='tipError' errorPar='{{errorPar}}' wx:if="{{isTipError}}"></tipError>
+<timePicker pickerShow="{{isPickerShow}}" id="picker" wx:if="{{isPickerRender}}" bind:hidePicker="pickerHide" bind:setPickerTime="setPickerTime" config="{{pickerConfig}}"></timePicker>

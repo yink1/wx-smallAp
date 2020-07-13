@@ -1,0 +1,2 @@
+<!--components/tipError/tipError.wxml-->
+<text class="tipShow">{{errorPar}}</text>
